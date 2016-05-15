@@ -1,0 +1,69 @@
+html, body, div.application, div.navigation, div.page {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+div.shadow-top {
+	box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+div.shadow-right {
+	box-shadow: 2px 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+div.shadow-bottom {
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+div.shadow-left {
+	box-shadow: -2px 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+div.navigation {
+	background-color: #999999;
+}
+
+div.page {
+	background-color: #fafafa;
+	transition: all 0.25s ease-in-out;
+}
+
+div.expand {
+	right: -256px;
+	left: 256px;
+}
+
+div.header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: #78909c;
+}
+
+div.title {
+	height: 64px;
+	border-bottom: 3px solid #cfd8dc;
+	background-color: #607d8b;
+}
+
+div.burger {
+	width: 64px;
+	height: 64px;
+	background-color: #78909c;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	cursor: pointer;
+}
+
+div.bar {
+	height: 56px;
+}
