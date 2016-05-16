@@ -17,11 +17,11 @@ var toggleStyle = function (element, style) {
 };
 
 var toggleNavigation = function () {
-	toggleStyle('page', 'expand');
+	toggleStyle('page', 'expanded');
 };
 
 var toggleLeftPane = function () {
-	toggleStyle('left-pane', 'collapse');
+	toggleStyle('left-pane', 'collapsed');
 };
 
 var hideView = function (event) {
@@ -33,6 +33,10 @@ var hideView = function (event) {
 
 var showViews = function () {
 	toggleStyle('view', 'hidden');
+};
+
+var toggleFloatingAction = function () {
+	toggleStyle('action-floating', 'pressed');
 };
 
 var init = function () {
@@ -50,4 +54,7 @@ var init = function () {
 		var contents = document.getElementsByClassName('content');
 		if (contents && contents.length) contents[0].addEventListener('click', showViews);
 	}
+
+	var floatingActions = document.getElementsByClassName('action-floating');
+	if (floatingActions && floatingActions.length) floatingActions[0].addEventListener('click', toggleFloatingAction);
 };
