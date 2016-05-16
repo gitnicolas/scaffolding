@@ -3,25 +3,42 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link href="styles/main.css" rel="stylesheet">
-	<link href="icons/icons.css" rel="stylesheet">
+	<link href="fonts/fonts.css" rel="stylesheet" type="text/css">
+	<link href="icons/icons.css" rel="stylesheet" type="text/css">
+	<link href="styles/main.css" rel="stylesheet" type="text/css">
 	<script src="scripts/main.js"></script>
 	<title>Reader</title>
 </head>
 <body onload="init();">
 <div class="application">
-	<div class="navigation"></div>
-	<div class="page shadow-left">
+	<div class="navigation">
+		<div class="navigation-title">
+			<div class="navigation-name">
+				<span class="first-letter">Navigation</span>
+			</div>
+		</div>
+	</div>
+	<div class="page shadow-left transition">
 		<div class="header">
 			<div class="title shadow-bottom">
 				<div class="burger">
 					<i>menu</i>
 				</div>
+				<div class="name">
+					<span class="first-letter">Scaffolding</span>
+				</div>
 			</div>
 			<div class="bar shadow-bottom"></div>
 		</div>
-		<div class="left-pane"></div>
-		<div class="content"></div>
+		<div class="content">
+			<div class="left-pane shadow-right transition"></div>
+			<div class="view transition">
+				<span class="first-letter">View 1</span>
+			</div>
+			<div class="view transition">
+				<span class="first-letter">View 2</span>
+			</div>
+		</div>
 	</div>
 </div>
 </body>
