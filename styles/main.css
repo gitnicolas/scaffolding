@@ -11,30 +11,31 @@ html, body, div.application, div.navigation, div.page {
 	font-weight: 300;
 	font-size: 14px;
 	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
 }
 
 div.shadow-top {
-	box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.25);
 }
 
 div.shadow-right {
-	box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 0 3px 0 rgba(0, 0, 0, 0.25);
 }
 
 div.shadow-bottom {
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
 }
 
 div.shadow-left {
-	box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: -2px 0 3px 0 rgba(0, 0, 0, 0.25);
 }
 
 div.shadow-page {
-	box-shadow: -2px 0 4px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: -3px 0 5px 0 rgba(0, 0, 0, 0.25);
 }
 
 div.shadow-floating {
-	box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 4px 7px 0 rgba(0, 0, 0, 0.25);
 }
 
 div.transition {
@@ -42,7 +43,7 @@ div.transition {
 }
 
 div.navigation {
-	background-color: #9e9e9e;
+	background-color: #757575;
 }
 
 span.first-letter::first-letter {
@@ -52,7 +53,7 @@ span.first-letter::first-letter {
 div.navigation-title {
 	width: 256px;
 	height: 64px;
-	border-bottom: 3px solid #bdbdbd;
+	border-bottom: 3px solid #9e9e9e;
 	display: flex;
 }
 
@@ -61,9 +62,9 @@ div.navigation-name {
 	display: flex;
 	padding-left: 20px;
 	align-items: center;
-	font-size: 24px;
+	font-size: 21px;
 	text-transform: uppercase;
-	color: white;
+	color: #eeeeee;
 }
 
 div.page {
@@ -107,7 +108,7 @@ div.name {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 24px;
+	font-size: 21px;
 	text-transform: uppercase;
 	color: white;
 }
