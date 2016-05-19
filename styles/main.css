@@ -47,8 +47,8 @@ div.navigation {
 	background-color: #757575;
 }
 
-span.first-letter::first-letter {
-	font-size: 120%;
+span.first-word {
+	font-weight: 400;
 }
 
 div.navigation-title {
@@ -87,10 +87,13 @@ div.header {
 }
 
 div.title {
+	position: relative;
 	height: 64px;
 	border-bottom: 3px solid #cfd8dc;
 	background-color: #607d8b;
 	display: flex;
+	font-size: 21px;
+	text-transform: uppercase;
 }
 
 div.burger, div.action {
@@ -103,13 +106,23 @@ div.burger, div.action {
 	cursor: pointer;
 }
 
+div.back {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 64px;
+	padding-left: 20px;
+	display: flex;
+	align-items: center;
+	color: white;
+	cursor: pointer;
+}
+
 div.name {
 	flex: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 21px;
-	text-transform: uppercase;
 	color: white;
 }
 
