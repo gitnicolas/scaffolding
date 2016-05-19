@@ -95,7 +95,6 @@ div.title {
 
 div.burger, div.action {
 	width: 64px;
-	height: 64px;
 	background-color: #78909c;
 	display: flex;
 	justify-content: center;
