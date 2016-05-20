@@ -42,6 +42,12 @@ div.shadow-floating {
 	box-shadow: 2px 4px 7px 0 rgba(0, 0, 0, 0.25);
 }
 
+.ellipsis {
+	overflow-x: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
 div.transition {
 	transition: all 0.15s ease-in-out;
 }
@@ -114,11 +120,15 @@ div.back {
 	top: 0;
 	bottom: 0;
 	left: 64px;
-	padding-left: 20px;
+	padding: 0 20px 0 20px;
 	display: flex;
 	align-items: center;
 	color: white;
 	cursor: pointer;
+}
+
+div.back span.ellipsis {
+	max-width: 320px;
 }
 
 div.name {
@@ -127,6 +137,10 @@ div.name {
 	justify-content: center;
 	align-items: center;
 	color: white;
+}
+
+div.name div.ellipsis {
+	max-width: 320px;
 }
 
 div.bar {
@@ -223,4 +237,18 @@ div[class~="action-unread"].pressed {
 div[class~="action-read"].pressed {
 	right: 160px;
 	opacity: 0;
+}
+
+/* div.burger.width(64px) + div.action.width(64px) + 2 * div.back.min-width(64px) + div.name.max-width(320px) */
+@media (max-width: 576px) {
+	div.name div {
+		display: none;
+	}
+}
+
+/* div.burger.width(64px) + div.action.width(64px) + 2 * div.back.max-width(256px) + div.name.max-width(320px) */
+@media (max-width: 960px) {
+	div.back span.ellipsis {
+		display: none;
+	}
 }
