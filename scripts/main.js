@@ -1,3 +1,7 @@
+var isMobile = function () {
+	return /iPad|iPhone|iPod|Android|BlackBerry|WinCE|Pocket/i.test(navigator.platform);
+};
+
 var getParentByClassName = function (element, className) {
 	while (!element.classList.contains(className)) element = element.parentElement;
 	return element;
@@ -40,21 +44,25 @@ var toggleFloatingAction = function () {
 };
 
 var init = function () {
+	var eventName = isMobile() ? 'touchstart' : 'click';
+
 	var burgers = document.getElementsByClassName('burger');
-	if (burgers && burgers.length) burgers[0].addEventListener('click', toggleNavigation);
+	if (burgers && burgers.length) burgers[0].addEventListener(eventName, toggleNavigation);
 
 	var leftPanes = document.getElementsByClassName('left-pane');
-	if (leftPanes && leftPanes.length) leftPanes[0].addEventListener('click', toggleLeftPane);
+	if (leftPanes && leftPanes.length) leftPanes[0].addEventListener(eventName, toggleLeftPane);
 
 	var views = document.getElementsByClassName('view');
 	var length;
 	if (views && (length = views.length)) {
-		for (var i = 0; i < length; i++) views[i].addEventListener('click', hideView);
+		for (var i = 0; i < length; i++) views[i].addEventListener(eventName, hideView);
 
 		var contents = document.getElementsByClassName('content');
-		if (contents && contents.length) contents[0].addEventListener('click', showViews);
+		if (contents && contents.length) contents[0].addEventListener(eventName, showViews);
 	}
 
 	var floatingActions = document.getElementsByClassName('action-floating');
-	if (floatingActions && floatingActions.length) floatingActions[0].addEventListener('click', toggleFloatingAction);
+	if (floatingActions && floatingActions.length) floatingActions[0].addEventListener(eventName, toggleFloatingAction);
+
+	alert('Platform: ' + navigator.platform + ', Mobile: ' + isMobile());
 };
