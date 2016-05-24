@@ -44,7 +44,7 @@ var toggleFloatingAction = function () {
 };
 
 var init = function () {
-	var eventName = isMobile() ? 'click' : 'click';
+	var eventName = isMobile() ? 'touchstart' : 'click';
 
 	var burgers = document.getElementsByClassName('burger');
 	if (burgers && burgers.length) burgers[0].addEventListener(eventName, toggleNavigation);
@@ -62,5 +62,5 @@ var init = function () {
 	}
 
 	var floatingActions = document.getElementsByClassName('action-floating');
-	if (floatingActions && floatingActions.length) floatingActions[0].addEventListener(eventName, toggleFloatingAction);
+	if (floatingActions && floatingActions.length) floatingActions[0].addEventListener('click', toggleFloatingAction);
 };
