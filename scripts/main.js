@@ -24,6 +24,10 @@ var toggleNavigation = function () {
 	toggleStyle('page', 'expanded');
 };
 
+var toggleMenu = function () {
+	toggleStyle('menu', 'hidden');
+};
+
 var toggleLeftPane = function () {
 	toggleStyle('left-pane', 'collapsed');
 };
@@ -48,6 +52,9 @@ var init = function () {
 
 	var burgers = document.getElementsByClassName('burger');
 	if (burgers && burgers.length) burgers[0].addEventListener(eventName, toggleNavigation);
+
+	var actions = document.getElementsByClassName('action');
+	if (actions && actions.length) actions[0].addEventListener(eventName, toggleMenu);
 
 	var leftPanes = document.getElementsByClassName('left-pane');
 	if (leftPanes && leftPanes.length) leftPanes[0].addEventListener(eventName, toggleLeftPane);
