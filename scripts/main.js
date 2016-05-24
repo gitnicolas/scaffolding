@@ -1,5 +1,5 @@
 var isMobile = function () {
-	return /iPad|iPhone|iPod|Android|BlackBerry|WinCE|Pocket/i.test(navigator.platform);
+	return /iPad|iPhone|iPod|Android|Linux arm|BlackBerry|WinCE|Pocket/i.test(navigator.platform);
 };
 
 var getParentByClassName = function (element, className) {
