@@ -50,24 +50,24 @@ var toggleFloatingAction = function () {
 var init = function () {
 	var eventName = isMobile() ? 'touchstart' : 'click';
 
-	var burgers = document.getElementsByClassName('burger');
-	if (burgers && burgers.length) burgers[0].addEventListener(eventName, toggleNavigation);
+	var burger = document.getElementById('burger');
+	if (burger) burger.addEventListener(eventName, toggleNavigation);
 
-	var actions = document.getElementsByClassName('action');
-	if (actions && actions.length) actions[0].addEventListener(eventName, toggleMenu);
+	var action = document.getElementById('action');
+	if (action) action.addEventListener(eventName, toggleMenu);
 
-	var leftPanes = document.getElementsByClassName('left-pane');
-	if (leftPanes && leftPanes.length) leftPanes[0].addEventListener(eventName, toggleLeftPane);
+	var leftPane = document.getElementById('left-pane');
+	if (leftPane) leftPane.addEventListener(eventName, toggleLeftPane);
 
 	var views = document.getElementsByClassName('view');
 	var length;
 	if (views && (length = views.length)) {
 		for (var i = 0; i < length; i++) views[i].addEventListener(eventName, hideView);
 
-		var contents = document.getElementsByClassName('content');
-		if (contents && contents.length) contents[0].addEventListener(eventName, showViews);
+		var content = document.getElementById('content');
+		if (content) content.addEventListener(eventName, showViews);
 	}
 
-	var floatingActions = document.getElementsByClassName('action-floating');
-	if (floatingActions && floatingActions.length) floatingActions[0].addEventListener('click', toggleFloatingAction);
+	var floatingAction = document.getElementById('action-floating');
+	if (floatingAction) floatingAction.addEventListener('click', toggleFloatingAction);
 };

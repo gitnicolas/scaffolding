@@ -206,10 +206,6 @@ div.view:last-child {
 	border-right: inherit;
 }
 
-div.hidden {
-	display: none;
-}
-
 div.action-floating {
 	position: absolute;
 	right: 32px;
@@ -274,4 +270,8 @@ div[class~="action-read"].pressed {
 	div.back div.ellipsis {
 		display: none;
 	}
+}
+
+div.hidden {
+	display: none;
 }
