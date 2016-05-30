@@ -227,34 +227,38 @@ div.pressed {
 }
 
 div.action-refresh {
-	bottom: 256px;
+	right: 0;
+	bottom: 192px;
 	opacity: 1;
 }
 
 div.action-unread {
-	right: 181px;
-	bottom: 181px;
+	right: 136px;
+	bottom: 136px;
 	opacity: 1;
 }
 
 div.action-read {
-	right: 256px;
+	right: 192px;
+	bottom: 0;
 	opacity: 1;
 }
 
 div[class~="action-refresh"].pressed {
-	bottom: 160px;
+	right: 0;
+	bottom: 96px;
 	opacity: 0;
 }
 
 div[class~="action-unread"].pressed {
-	right: 113px;
-	bottom: 113px;
+	right: 68px;
+	bottom: 68px;
 	opacity: 0;
 }
 
 div[class~="action-read"].pressed {
-	right: 160px;
+	right: 96px;
+	bottom: 0;
 	opacity: 0;
 }
 

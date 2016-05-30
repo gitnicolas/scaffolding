@@ -3,12 +3,11 @@ var isMobile = function () {
 };
 
 var getParentByClassName = function (element, className) {
-	while (!element.classList.contains(className)) element = element.parentElement;
+	while (element && !element.classList.contains(className)) element = element.parentElement;
 	return element;
 };
 
 var toggleStyle = function (element, style) {
-	event.stopPropagation();
 	var elements = document.getElementsByClassName(element);
 	var length;
 	if (elements && (length = elements.length)) {
@@ -44,7 +43,21 @@ var showViews = function () {
 };
 
 var toggleFloatingAction = function () {
-	toggleStyle('action-floating', 'pressed');
+	if (document.getElementById('action-floating').classList.contains('pressed')) {
+		toggleStyle('action-floating', 'pressed');
+		setTimeout(function () {
+			var elements = document.getElementById('action-floating').children;
+			var length = elements.length;
+			for (var i = 0; i < length; i++) elements[i].classList.add('hidden');
+		}, 150);
+	} else {
+		var elements = document.getElementById('action-floating').children;
+		var length = elements.length;
+		for (var i = 0; i < length; i++) elements[i].classList.remove('hidden');
+		setTimeout(function () {
+			toggleStyle('action-floating', 'pressed');
+		}, 0);
+	}
 };
 
 var init = function () {
@@ -63,11 +76,10 @@ var init = function () {
 	var length;
 	if (views && (length = views.length)) {
 		for (var i = 0; i < length; i++) views[i].addEventListener(eventName, hideView);
-
 		var content = document.getElementById('content');
 		if (content) content.addEventListener(eventName, showViews);
 	}
 
 	var floatingAction = document.getElementById('action-floating');
-	if (floatingAction) floatingAction.addEventListener('click', toggleFloatingAction);
+	if (floatingAction) floatingAction.addEventListener(eventName, toggleFloatingAction);
 };
