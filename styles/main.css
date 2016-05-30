@@ -19,27 +19,27 @@ div.application, div.navigation, div.page {
 }
 
 div.shadow-top {
-	box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.25);
 }
 
 div.shadow-right {
-	box-shadow: 2px 0 3px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 2px 0 3px rgba(0, 0, 0, 0.25);
 }
 
 div.shadow-bottom {
-	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
 }
 
 div.shadow-left {
-	box-shadow: -2px 0 3px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: -2px 0 3px rgba(0, 0, 0, 0.25);
 }
 
 div.shadow-page {
-	box-shadow: -3px 0 5px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: -3px 0 5px rgba(0, 0, 0, 0.25);
 }
 
 div.shadow-floating {
-	box-shadow: 2px 4px 7px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.25);
 }
 
 div.ellipsis {
