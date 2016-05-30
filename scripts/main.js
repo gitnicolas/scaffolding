@@ -7,7 +7,8 @@ var getParentByClassName = function (element, className) {
 	return element;
 };
 
-var toggleStyle = function (element, style) {
+var toggleStyle = function (element, style, event) {
+	if (event) event.stopPropagation();
 	var elements = document.getElementsByClassName(element);
 	var length;
 	if (elements && (length = elements.length)) {
@@ -19,16 +20,16 @@ var toggleStyle = function (element, style) {
 	}
 };
 
-var toggleNavigation = function () {
-	toggleStyle('page', 'expanded');
+var toggleNavigation = function (event) {
+	toggleStyle('page', 'expanded', event);
 };
 
-var toggleMenu = function () {
-	toggleStyle('menu', 'hidden');
+var toggleMenu = function (event) {
+	toggleStyle('menu', 'hidden', event);
 };
 
-var toggleLeftPane = function () {
-	toggleStyle('left-pane', 'collapsed');
+var toggleLeftPane = function (event) {
+	toggleStyle('left-pane', 'collapsed', event);
 };
 
 var hideView = function (event) {
@@ -38,13 +39,13 @@ var hideView = function (event) {
 	if (!classes.contains(style)) classes.add(style);
 };
 
-var showViews = function () {
-	toggleStyle('view', 'hidden');
+var showViews = function (event) {
+	toggleStyle('view', 'hidden', event);
 };
 
-var toggleFloatingAction = function () {
+var toggleFloatingAction = function (event) {
 	if (document.getElementById('action-floating').classList.contains('pressed')) {
-		toggleStyle('action-floating', 'pressed');
+		toggleStyle('action-floating', 'pressed', event);
 		setTimeout(function () {
 			var elements = document.getElementById('action-floating').children;
 			var length = elements.length;
